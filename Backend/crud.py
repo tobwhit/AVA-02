@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session , aliased
 from sqlalchemy import distinct, func, cast, Numeric
-from . import models, schemas
+import models, schemas
 from datetime import datetime
 import logging
 
