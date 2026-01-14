@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.concurrency import asynccontextmanager
-from endpoints import drive, driver, data
+from endpoints import drive, driver, data, telemetry
 from fastapi.middleware.cors import CORSMiddleware
 
 import crud, models, schemas
@@ -31,6 +31,7 @@ def get_db():
 app.include_router(drive.router)
 app.include_router(driver.router)
 app.include_router(data.router)
+app.include_router(telemetry.router)
 
 
 # Root endpoint (optional)
